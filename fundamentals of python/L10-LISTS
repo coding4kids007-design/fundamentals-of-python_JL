@@ -1,0 +1,73 @@
+#list1.append("python")
+#print(list1)
+#list1.insert(0,"hi")
+#print(list1)
+#del list1[0]
+#print(list1)
+#list1[0]="Physics"
+#print(list1)
+import random
+import time, sys
+
+cha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+sym = ["!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","}","[","]","|","<",">"]
+num1 = random.randint(0,9)
+num2 = random.randint(0,9)
+a = random.choice(cha)
+b = random.choice(cha)
+c = random.choice(cha)
+d = random.choice(sym)
+e = random.choice(sym)
+f = random.choice(sym)
+guess =  str("A strong password is, {}{}{}{}{}{}{}{}".format(d,num2,f,a,e,c,num1,b))
+print(guess)
+
+print("\n" + "=" * 40 + "\n")
+
+time.sleep(4)
+while True:
+  again = input("Do you want another password that fits you? Y or N\n")
+  if again == "Y":
+    cha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    sym = ["!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","}","[","]","|","<",">"]
+    num1 = random.randint(0,9)
+    num2 = random.randint(0,9)
+    a = random.choice(cha)
+    b = random.choice(cha)
+    c = random.choice(cha)
+    d = random.choice(sym)
+    e = random.choice(sym)
+    f = random.choice(sym)
+    guess =  str("A strong password is, {}{}{}{}{}{}{}{}".format(d,num2,f,a,e,c,num1,b))
+    print(guess)
+    print("\n" + "=" * 40 + "\n")
+    time.sleep(4)
+
+  elif again == "N":
+    sys.exit()
+  
+  else:
+    print("Invalid Input!")
+    again2 = input("Do you want another password that fits you? Y or N\n")
+    if again2 == "Y":
+      cha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+      sym = ["!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","}","[","]","|","<",">"]
+      num1 = random.randint(0,9)
+      num2 = random.randint(0,9)
+      a = random.choice(cha)
+      b = random.choice(cha)
+      c = random.choice(cha)
+      d = random.choice(sym)
+      e = random.choice(sym)
+      f = random.choice(sym)
+      guess =  str("A strong password is, {}{}{}{}{}{}{}{}".format(d,num2,f,a,e,c,num1,b))
+      print(guess)
+      print("\n" + "=" * 40 + "\n")
+      time.sleep(4)
+      
+    elif again2 == "N":
+      sys.exit()
+      
+    else:
+      print("INVALID INPUT! TRY AGAIN BY STARTING OVER")
+      sys.exit()
